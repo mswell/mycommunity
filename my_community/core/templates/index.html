@@ -21,12 +21,18 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -23.4698525, lng: -47.5767151},
-          zoom: 8
+          center: {lat: -23.5, lng: -47.5},
+          zoom: 13
         });
+        var point = new google.maps.LatLng(-23.4895183,-47.4464779);
+        var marker = new google.maps.Marker({
+            position: point,
+            title:"O Bretão"
+        });
+        marker.setMap(map);
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
     async defer></script>
   </body>
 </html>
